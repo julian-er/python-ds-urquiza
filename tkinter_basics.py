@@ -31,7 +31,7 @@ class tkinter_basics:
         self.root.minsize(width=500, height=500)
         self.root.iconbitmap(self.iconUrl)
         self.root.resizable(False, False)
-        self.root.title(self.title + 'Second term practice')
+        self.root.title(self.title + ' second term practice')
 
     def can_resize(self, resizable_boolean):
         '''
