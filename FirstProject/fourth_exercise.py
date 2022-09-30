@@ -9,11 +9,11 @@ from tkinter_basics import tkinter_basics
 ej_4 = tkinter_basics()
 ej_4.can_resize(True)
 ej_4.root.minsize(200,200)
-def set_value (gender_param) :
+def set_value (action_param) :
     '''
         Set new number string
     '''
-    if(gender_param.lower() == 'sub'):
+    if(action_param.lower() == 'sub'):
         valueCalculated.set(valueCalculated.get() - 1)
     else :
         valueCalculated.set(valueCalculated.get() + 1)
