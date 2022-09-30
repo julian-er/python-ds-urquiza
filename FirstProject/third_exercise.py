@@ -6,7 +6,7 @@ from tkinter_basics import tkinter_basics
 from tkinter import *
 
 
-ej_3 = tkinter_basics(iconUrl='./icons/j2.ico')
+ej_3 = tkinter_basics(title='Gender exercise', iconUrl='./icons/j2.ico')
 ej_3.can_resize(False)
 ej_3.change_theme('dark')
 
