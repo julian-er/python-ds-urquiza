@@ -23,7 +23,6 @@ class tkinter_basics:
         self.title = title
         self.iconUrl = iconUrl
         self.root = Tk()
-        self.top = Toplevel()
         self.frame = ttk.Frame(self.root, padding=self.padding_number)
 
         self.frame.grid()
@@ -60,34 +59,3 @@ class tkinter_basics:
             Execute mainloop 
         '''
         self.root.mainloop()
-
-
-# Integrando todos los temas vistos de interfaz gráfica diseñar:
-# 1- Una ventana que permita ingresar usuario y contraseña.
-ej_1 = tkinter_basics(iconUrl='./icons/j2.ico')
-ej_1.can_resize(False)
-ej_1.change_theme('dark')
-ej_1.execute_window()
-
-# 2- Una ventana que permita ingresar los siguientes datos:
-#    Apellido y Nombre
-#    Domicilio
-#    Teléfono
-#    DNI
-ej_2 = tkinter_basics()
-ej_2.can_resize(True)
-ej_2.execute_window()
-
-# 3- Disponer dos Botones con las etiquetas: "varón" y "mujer", al presionarse mostrar un
-# Texto en color según el botón elegido
-ej_3 = tkinter_basics(iconUrl='./icons/j2.ico')
-ej_3.can_resize(False)
-ej_3.change_theme('dark')
-ej_3.execute_window()
-
-# 4- Mostrar una ventana y en su interior dos botones y una label. La label muestra
-# inicialmente el valor 1. Cada uno de los botones permiten incrementar o decrementar
-# en uno el contenido de la label
-ej_4 = tkinter_basics()
-ej_4.can_resize(True)
-ej_4.execute_window()
