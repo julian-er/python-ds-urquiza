@@ -15,19 +15,17 @@ class tkinter_basics:
         iconUrl (str) : route of window icon -> has default if value not provided
         cols (int) : number of columns on your window
         rows (int) : number of rows on your window
-        padding_number (int) : padding of window -> has default if value not provided
 
         Return tk window
     '''
 
-    def __init__(self, title='DS Urquiza',  iconUrl='./icons/j1.ico', cols=12, rows=12, padding_number=10):
+    def __init__(self, title='DS Urquiza',  iconUrl='./icons/j1.ico', cols=12, rows=12):
 
         # define variables
         self.title = title
         self.iconUrl = iconUrl
         self.col = cols
         self.row = rows
-        self.padding_number = padding_number
         self.root = Tk()
 
         self.root.minsize(width=500, height=500)
@@ -66,7 +64,7 @@ class tkinter_basics:
             col (int) : default 12
         '''
         for x in range(self.col):
-            self.root.columnconfigure(x, weight=1)
+            self.root.columnconfigure(x, weight=1, uniform="x")
 
     def define_rows_quantity(self):
         '''
@@ -76,7 +74,7 @@ class tkinter_basics:
             col (int) : default 12
         '''
         for x in range(self.row):
-            self.root.rowconfigure(x, weight=1)
+            self.root.rowconfigure(x, weight=1, uniform="x")
 
     def execute_window(self):
         '''
