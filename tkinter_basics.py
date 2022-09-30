@@ -16,7 +16,7 @@ class tkinter_basics:
         cols (int) : number of columns on your window
         rows (int) : number of rows on your window
 
-        Return tk window
+        Return tk basics class , to execute window do your_variable.execute_window()
     '''
 
     def __init__(self, title='DS Urquiza',  iconUrl='./icons/j1.ico', cols=12, rows=12):
