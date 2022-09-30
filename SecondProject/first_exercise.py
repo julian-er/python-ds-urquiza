@@ -14,7 +14,7 @@ from tkinter import *
 from tkinter_new_window import new_window
 from tkinter_basics import tkinter_basics
 
-## declre exercise 1 and props
+## declare exercise 1 and props
 ej_1 = tkinter_basics(title='Ingreso de usuario - ')
 ej_1.can_resize(False)
 ej_1.root.config(background='#594A7D')
@@ -28,10 +28,10 @@ def login () :
     '''
     if (username.get() == validUser and password.get() == validPassword):
         #new window declaration
-        new_window(ej_1.root, type_window='success_message' , title='Second exercise goes here - ', )
+        new_window(ej_1.root, type_window='second_exercise' , title='Second exercise goes here - ').execute_window()
     else:
         #new window declaration
-        new_window(ej_1.root, type_window='error_message', title='Ups an error occurs - ', iconUrl='./icons/j2.ico').minsize(200,200)
+        new_window(ej_1.root, type_window='error_message', title='Ups an error occurs - ', iconUrl='./icons/j2.ico').execute_window()
 
 
 

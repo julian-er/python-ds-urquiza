@@ -26,8 +26,6 @@ class new_window(Toplevel):
         self.type = type_window
         self.minsize(500, 500)
         self.resizable(False, False)
-        label = Label(self, text =self.type)
-        label.pack()
 
     def define_cols_quantity(self):
         '''
@@ -49,11 +47,11 @@ class new_window(Toplevel):
         for x in range(self.row):
             self.rowconfigure(x, weight=1, uniform="x")
 
-
-
-
-        # label = Label(self, text ="Your user and password aren't valid")
-        # label.pack()
-
-        # label = Label(self, text ="This is a new Window")
-        # label.pack()
+    def execute_window(self):
+        if self.type == 'error_message' :
+            label = Label(self, text ="Your user and password aren't valid")
+            label.pack()
+        elif self.type == 'second_exercise' :
+            label = Label(self, text ="This is a new Window")
+            label.pack()
+    
