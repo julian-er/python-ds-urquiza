@@ -4,28 +4,32 @@ from tkinter import *
 from tkinter import ttk
 
 # Create tkinter basics class
+
+
 class tkinter_basics:
     '''
         Define Tkinter class with basics windows and configurations
 
         Parameter:
-        padding_number (int) : padding of window -> has default if value not provided
         title (str) : title of window -> has default if value not provided
         iconUrl (str) : route of window icon -> has default if value not provided
+        cols (int) : number of columns on your window
+        rows (int) : number of rows on your window
+        padding_number (int) : padding of window -> has default if value not provided
 
         Return tk window
     '''
 
-    def __init__(self, title='DS Urquiza', padding_number=10, iconUrl = './icons/j1.ico'):
+    def __init__(self, title='DS Urquiza',  iconUrl='./icons/j1.ico', cols=12, rows=12, padding_number=10):
 
         # define variables
-        self.padding_number = padding_number
         self.title = title
         self.iconUrl = iconUrl
+        self.col = cols
+        self.row = rows
+        self.padding_number = padding_number
         self.root = Tk()
-        self.frame = ttk.Frame(self.root, padding=self.padding_number)
 
-        self.frame.grid()
         self.root.minsize(width=500, height=500)
         self.root.iconbitmap(self.iconUrl)
         self.root.resizable(False, False)
@@ -45,7 +49,7 @@ class tkinter_basics:
             Choose a theme with string, by default theme is light.
 
             Parameter:
-            theme (str) 
+            theme (str)
         '''
         if theme.lower() == "dark":
             self.root.title(self.title + ' - dark theme')
@@ -54,8 +58,30 @@ class tkinter_basics:
             self.root.title(self.title + ' - light theme')
             self.root.config(background='#FFFFFF')
 
+    def define_cols_quantity(self):
+        '''
+            Choose quantity columns for your grid
+
+            Parameter:
+            col (int) : default 12
+        '''
+        for x in range(self.col):
+            self.root.columnconfigure(x, weight=1)
+
+    def define_rows_quantity(self):
+        '''
+            Choose quantity columns for your grid
+
+            Parameter:
+            col (int) : default 12
+        '''
+        for x in range(self.row):
+            self.root.rowconfigure(x, weight=1)
+
     def execute_window(self):
         '''
-            Execute mainloop 
+            Execute mainloop and indispensable functions
         '''
+        self.define_cols_quantity()
+        self.define_rows_quantity()
         self.root.mainloop()
