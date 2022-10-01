@@ -7,8 +7,6 @@
 #    la ventana del ejercicio 2 minimizando o cerrando la primera.
 
 import sys
-from turtle import title
-
 sys.path.append(".")
 from tkinter import *
 from tkinter_new_window import new_window
@@ -28,10 +26,13 @@ def login () :
     '''
     if (username.get() == validUser and password.get() == validPassword):
         #new window declaration
+        ej_1.root.iconify()
         new_window(ej_1.root, type_window='second_exercise' , title='Second exercise goes here - ').execute_window()
     else:
         #new window declaration
-        new_window(ej_1.root, type_window='error_message', title='Ups an error occurs - ', iconUrl='./icons/j2.ico').execute_window()
+        error = new_window(ej_1.root, type_window='error_message', title='Ups an error occurs - ', iconUrl='./icons/j2.ico')
+        error.minsize(200,50)
+        error.execute_window()
 
 
 
