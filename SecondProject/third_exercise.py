@@ -9,7 +9,7 @@ from tkinter_new_window import new_window
 from tkinter_basics import tkinter_basics
 
 ## declare exercise 3 and props
-ej_3 = tkinter_basics(title='Travel - ')
+ej_3 = tkinter_basics(title='Travel (third exercise)- ')
 ej_3.can_resize(FALSE)
 ej_3.root.minsize(1000,800)
 ej_3.root.config(background='#594A7D')
